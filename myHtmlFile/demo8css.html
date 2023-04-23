@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a {
+            text-decoration: underline;
+        }
+
+        #b {
+            text-decoration: overline;
+        }
+
+        #c {
+            text-decoration: overline underline;
+        }
+
+        #d {
+            text-decoration: underline overline red;
+        }
+
+        #e {
+            text-decoration: underline sandybrown 5px;
+        }
+
+        #f {
+            text-decoration: underline wavy red 10px;
+        }
+
+        #g {
+            color: red;
+        }
+
+        #g:hover {
+            color: blue;
+            text-decoration: overline;
+            font-size: 10px;
+        }
+
+        #h::first-letter {
+            color: rgb(0, 255, 13);
+            font-size: 40px;
+        }
+
+        input::placeholder {
+            color: red;
+            font-size: 10px;
+        }
+
+        input:focus {
+            width: 300px;
+            color: green;
+        }
+
+        /* input {
+            padding-bottom: 1px solid;
+            outline: 0;
+            border: 0;
+            padding: 0 10px;
+
+        } */
+
+        input {
+            border: 0;
+            padding: 0 10px;
+            border-bottom: 1px solid;
+            outline: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 id="a">Text decoration</h3>
+    <h3 id="b">Text decoration</h3>
+    <h3 id="c">Text decoration</h3>
+    <h3 id="d">Text decoration</h3>
+    <h3 id="e">Text decoration</h3>
+    <h3 id="f">Text decoration</h3>
+    <h1 id="g">Hover Me</h1>
+    <p id="h">Lorem ipsum dolor sit amet
+        consectetur adipisicing elit.
+        Fugit, quia. Earum pariatur,
+        dolor qui dolorem ipsam exercitationem
+        numquam libero cupiditate nemo aliquam totam doloremque reiciendis provident quae aperiam blanditiis atque!</p>
+    <input type="text" placeholder="enter name">
+
+</body>
+
+</html>

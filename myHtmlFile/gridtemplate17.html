@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      background-color: red;
+      height: 100px;
+      /* width: 100px; */
+      min-width: 200px;
+    }
+
+    main {
+      display: grid;
+      justify-content: center;
+      grid-template-areas:
+        /* "a b c d"
+        "e f g h"
+        "i j k l" */
+
+        /* "a b c d e f"
+        "g h i j k l" */
+
+        "nav nav nav nav"
+        "b b c c"
+        "d d e e"
+        "f f g g"
+        "h h i i"
+        "j j k k"
+        "footer footer footer footer"
+
+
+      ;
+    }
+
+    #a {
+      background-color: aqua;
+      grid-area: nav;
+      width: 100%;
+    }
+
+    #b {
+      background-color: red;
+      grid-area: b;
+    }
+
+    #c {
+      background-color: rgb(216, 35, 35);
+      grid-area: c;
+      width: 300px;
+    }
+
+    #d {
+      background-color: green;
+      grid-area: d
+    }
+
+    #e {
+      background-color: rgb(255, 0, 64);
+      grid-area: e
+    }
+
+    #f {
+      background-color: rgb(39, 54, 54);
+      grid-area: f
+    }
+
+    #g {
+      background-color: rgb(0, 255, 42);
+      grid-area: g
+    }
+
+    #h {
+      background-color: rgb(255, 238, 0);
+      grid-area: h
+    }
+
+    #i {
+      background-color: rgb(255, 115, 0);
+      grid-area: i
+    }
+
+    #j {
+      background-color: rgb(148, 216, 216);
+      grid-area: j
+    }
+
+    #k {
+      background-color: rgb(5, 49, 49);
+      grid-area: k
+    }
+
+    #l {
+      background-color: rgb(140, 0, 255);
+      grid-area: footer;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div id="a">nav</div>
+    <div id="b">slider</div>
+    <div id="c">container</div>
+    <div id="d">slider</div>
+    <div id="e">container</div>
+    <div id="f">slider</div>
+    <div id="g">container</div>
+    <div id="h">slider</div>
+    <div id="i">container</div>
+    <div id="j">slider</div>
+    <div id="k">container</div>
+    <div id="l">Footer</div>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>templates</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main {
+      /* border: 1px solid red; */
+      background-color: rgb(62, 101, 164);
+      
+      height: auto;
+      /* border-radius: 58px; */
+    }
+
+    .mainchild {
+      background-color: #ffff;
+      margin: 0px 98px;
+    }
+
+    .mainsection {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1300px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      background-color: #f2f2f2;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      padding: 10px;
+      margin-top: -22px;
+      color: rgb(14, 13, 13);
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0px 3px 3px 0px;
+      user-select: none;
+      justify-content: center;
+      display: flex;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0px 0px 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(204, 192, 192, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #0e0d0d;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 137px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 21px;
+      padding: 5px 12px;
+      position: absolute;
+      top: 10px;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 16px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+      .prev,
+      .next,
+      .text {
+        font-size: 11px;
+      }
+    }
+
+    .sliderimg {
+      height: 600px;
+    }
+
+    .mySlides img {
+      height: 520px;
+      /* filter: blur(2px); */
+    }
+
+    #nav {
+      background-color: rgb(53, 63, 65);
+      height: 60px;
+      display: flex;
+      padding: 0px 40px;
+      align-items: center;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    #navright {
+      display: flex;
+      gap: 20px;
+      font-weight: 600;
+      color: #ffff;
+    }
+
+    #navleft {
+      font-size: 39px;
+      color: #ffff;
+    }
+
+    .textchild {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #buttontext {
+      background-color: wheat;
+      display: flex;
+      border: 3px solid white;
+      justify-content: center;
+      align-items: center;
+      height: 48px;
+      width: 170px;
+      color: white;
+      font-size: 20px;
+      border-radius: 35px;
+      animation: buttonss 3s linear infinite;
+    }
+
+    @keyframes buttonss {
+      0% {
+        background-color: aqua;
+      }
+
+      25% {
+        background-color: magenta;
+      }
+
+      100% {
+        background-color: yellowgreen;
+      }
+    }
+
+    .secsection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 40px 40px;
+    }
+
+    .secsecup {
+      display: flex;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: 600;
+      color: #124171;
+    }
+
+    .secseccenter {
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: justify;
+      color: #124171;
+    }
+
+    .secsecbottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid #124171;
+      height: 46px;
+      width: 164px;
+      color: #124171;
+      font-size: 20px;
+      border-radius: 50px;
+    }
+
+    .thirdsecmain {
+      height: 300px;
+      display: flex;
+    }
+
+    .thirdcardsec {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      gap: 20px;
+      /* height: 260px; */
+      width: 395px;
+      color: #f2f2f2;
+      background-color: #124171;
+    }
+
+    .thirdcardsecbet {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      gap: 20px;
+      /* height: 260px; */
+      width: 390px;
+      color: #f2f2f2;
+      background-color: black;
+    }
+
+    .cardlogo i {
+      font-size: 40px;
+      font-weight: 600;
+    }
+
+    .foursecmain {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      padding: 8px 0 40px 0;
+      margin: 30px;
+    }
+
+    .topbetbottdiv {
+      display: flex;
+      gap: 20px;
+      color: #124171;
+    }
+
+    .firstdiv {
+      background-color: rgb(223 212 212 / 30%);
+      height: 70px;
+      width: 263px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .betweendiv {
+      background-color: rgb(223, 212, 212);
+      height: 70px;
+      width: 263px;
+    }
+
+    .rightdiv {
+      background-color: rgb(223, 212, 212);
+      height: 70px;
+      width: 263px;
+    }
+
+    .circlediv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #124171;
+      /* border: 2px solid #124171; */
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      font-size: 35px;
+    }
+
+    .fivemaindiv {
+      background-color: #124171;
+      display: flex;
+      gap: 20px;
+      height: 300px;
+    }
+
+    .fivefstfdiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 293.5px;
+      height: 290px;
+      /* border: 1px solid red; */
+      font-size: 30px;
+    }
+
+    .fivesecdiv {
+      width: 293.5px;
+      height: 290px;
+      border: 1px solid red;
+    }
+
+    .fivethirddiv {
+      width: 293.5px;
+      height: 290px;
+      border: 1px solid red;
+    }
+
+    .fivefourdiv {
+      width: 293.5px;
+      height: 290px;
+      border: 1px solid red;
+    }
+
+    .fivecirclediv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      color: #f2f2f2;
+    }
+
+    .sixmaindiv {
+      background-color: white;
+    }
+
+    .sixfirst {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      color: #124171;
+    }
+
+    .sixsecend {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .galeryheading {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      color: #124171;
+      font-weight: 600;
+    }
+
+    /* using grid(start) */
+    .gallerydiv {
+      background-color: #124171;
+      display: grid;
+      /* grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto;  */
+
+      grid-template-columns: repeat(3, auto);
+    }
+
+    .image_items {
+      height: 245px;
+      background-color: #c9c0c0;
+    }
+
+    .image_items img {
+      height: 250px;
+      width: 384.5px;
+    }
+
+    footer {
+      background-color: black;
+      padding: 1px 0px;
+      color: white;
+    }
+
+    #first_div {
+      display: flex;
+      height: 460px;
+      margin: 5px 5px;
+    }
+
+    #firstdivkeleft {
+      display: flex;
+      flex-direction: column;
+      padding: 34px 28px;
+      gap: 20px;
+      /* border: 1px solid rgb(0, 255, 42); */
+      width: 700px;
+      margin: 0 5px;
+    }
+
+    #firstdivkeright {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      /* border: 1px solid red; */
+      width: 1000px;
+      margin: 5px 5px;
+      padding: 39px;
+    }
+
+    .socialsitewithcircl {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border: 1px solid white;
+      border-radius: 50px;
+    }
+
+    #requiremaindiv {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    #requireinformation {
+      display: flex;
+      gap: 20px;
+    }
+
+    .signup {
+      border: 3px solid white;
+      text-align: center;
+      padding: 10px;
+      margin: 0 130px 0 0;
+    }
+
+    .signup a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .formdiv {
+      display: flex;
+      gap: 20px;
+    }
+
+    .email {
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .email input {
+      width: 200px;
+      height: 45px;
+    }
+
+    .birthday {
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .birthday input {
+      width: 136px;
+      height: 45px;
+      color: #726c6c;
+    }
+
+    .firstrightdiv {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .secmaindiv {
+      display: flex;
+      padding: 20px 20px;
+      justify-content: space-between;
+    }
+
+    .secmaindivkeleft {
+      display: flex;
+      gap: 20px;
+      font-size: 12px;
+      flex-wrap: wrap;
+    }
+
+    .secdivkeright {
+      display: flex;
+      gap: 20px;
+      font-size: 12px;
+      flex-wrap: wrap;
+    }
+
+    .third_div {
+      padding: 20px 20px;
+      color: #ffffffa3;
+    }
+
+    .third_div span {
+      color: #ffffffa3;
+      padding: 0 5px;
+    }
+
+    .third_div a {
+      padding: 0 5px;
+    }
+
+    /* using  for media query */
+
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="mainchild">
+      <div class="mainsection">
+        <div class="sliderimg">
+          <div id="nav">
+            <div id="navleft">
+              <p><b>1</b>PAGE</p>
+            </div>
+            <div id="navright">
+              <p>HOME</p>
+              <p>ABOUT US</p>
+              <p>OUR PORTFOLIO</p>
+              <p>CONTACT US</p>
+            </div>
+          </div>
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="../../images/laptop-2838921.jpg" style="width: 100%" />
+              <div class="text">
+                <div class="textchild">
+                  <p style="font-size: 40px; color: white; font-weight: 600">
+                    Game Development
+                  </p>
+                  <p style="font-size: 20px; color: white; font-weight: 600">
+                    Game Development is the art of creating games and
+                    describes the design, <br />
+                    development and release of a game.
+                  </p>
+
+                  <p id="buttontext">Get Started</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+
+              <img src="../../images/apple-1172060.jpg" alt="apple-1172" style="width: 100%" />
+              <div class="text">
+                <div class="textchild">
+                  <p style="font-size: 40px; color: #f2f2f2; font-weight: 600">
+                    Web Development
+                  </p>
+                  <p style="font-size: 20px; color: #f2f2f2; font-weight: 600">
+                    Web development is the work involved in developing a
+                    website <br />
+                    for the Internet or an intranet.
+                  </p>
+
+                  <p id="buttontext">Get Started</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="../../images/apples-3580560.jpg" style="width: 100%" />
+              <div class="text">
+                <div class="textchild">
+                  <p style="font-size: 40px; color: #f2f2f2; font-weight: 600">
+                    Mobile Development
+                  </p>
+                  <p style="font-size: 20px; color: #f2f2f2; font-weight: 600">
+                    Mobile application development is the process of making
+                    software for smartphones, <br />
+                    tablets and digital assistants.
+                  </p>
+
+                  <p id="buttontext">Get Started</p>
+                </div>
+              </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            <br />
+            <div style="text-align: center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+          </div>
+        </div>
+        <div class="secsection">
+          <p class="secsecup">Welcome To Our Website</p>
+          <p class="secseccenter">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            exercitationem debitis soluta neque earum provident adipisci ipsam
+            molestiae, delectus impedit. Quam nemo, velit veritatis deleniti
+            facere accusantium cupiditate laboriosam asperiores ipsum unde,
+            sapiente deserunt quisquam laborum harum expedita exercitationem?
+            Error reprehenderit, soluta qui voluptate sed neque excepturi
+            officiis voluptatem omnis, quos magni molestiae atque architecto
+            ipsum aliquam repellat, doloribus iste.
+          </p>
+          <p class="secsecbottom">Read More</p>
+        </div>
+
+        <div class="thirdsecmain">
+          <div class="thirdcardsec">
+            <div class="cardlogo">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <div class="cardheadtext">
+              <p style="font-size: 30px; font-weight: 600">Our History</p>
+            </div>
+            <div class="cardtext">
+              <p style="font-size: 20px">
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.Placeat ratione dolore dolorem. Dolore rerum iusto vitae
+                eos.
+              </p>
+            </div>
+          </div>
+          <div class="thirdcardsecbet">
+            <div class="cardlogo">
+              <i class="fa-solid fa-person-circle-exclamation"></i>
+            </div>
+            <div class="cardheadtext">
+              <p style="font-size: 30px; font-weight: 600">Our Mission</p>
+            </div>
+            <div class="cardtext">
+              <p style="font-size: 20px">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Placeat ratione dolore voluptatibus labore, perferendis
+                dolorem. Dolore rerum iusto vitae eos.
+              </p>
+            </div>
+          </div>
+          <div class="thirdcardsec">
+            <div class="cardlogo">
+              <i class="fa-solid fa-glasses"></i>
+            </div>
+            <div class="cardheadtext">
+              <p style="font-size: 30px; font-weight: 600">Our Vision</p>
+            </div>
+            <div class="cardtext">
+              <p style="font-size: 20px">
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.Placeat ratione dolore dolorem. Dolore rerum iusto vitae
+                eos.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="foursecmain">
+          <p style="color: teal; font-size: 30px; font-weight: 600">
+            Our Services
+          </p>
+          <p style="font-weight: 600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+            laboriosam ex nostrum quisquam totam tempore. Quos a neque
+            quibusdam explicabo.
+          </p>
+          <div class="topbetbottdiv">
+            <div class="firstdiv">
+              <div class="circlediv">
+                <i class="fa-sharp fa-solid fa-display"></i>
+              </div>
+              <p style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 600;
+                  ">
+                WEB DESIGN
+              </p>
+            </div>
+            <div class="firstdiv">
+              <div class="circlediv">
+                <i class="fa-sharp fa-solid fa-laptop-code"></i>
+              </div>
+              <p style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 600;
+                  ">
+                WEB DEVELOPMENT
+              </p>
+            </div>
+            <div class="firstdiv">
+              <div class="circlediv">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <p style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 600;
+                  ">
+                THEME DEVELOPMENT
+              </p>
+            </div>
+          </div>
+          <div class="topbetbottdiv">
+            <div class="firstdiv">
+              <div class="circlediv">
+                <i class="fa-sharp fa-solid fa-gears"></i>
+              </div>
+              <p style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 600;
+                  ">
+                GAME DEVELOPMENT
+              </p>
+            </div>
+            <div class="firstdiv">
+              <div class="circlediv">
+                <i class="fa-solid fa-ghost"></i>
+              </div>
+              <p style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 600;
+                  ">
+                APPS DEVELOPMENT
+              </p>
+            </div>
+            <div class="firstdiv">
+              <div class="circlediv">
+                <i class="fa-sharp fa-solid fa-display"></i>
+              </div>
+              <p style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 600;
+                  ">
+                DESKTOP APPLICATION
+              </p>
+            </div>
+          </div>
+          <div class="topbetbottdiv">
+            <div class="firstdiv">
+              <div class="circlediv">
+                <i class="fa-brands fa-wordpress"></i>
+              </div>
+              <p style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 600;
+                  ">
+                WORDPRESS THEMES
+              </p>
+            </div>
+            <div class="firstdiv">
+              <div class="circlediv">
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <p style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 600;
+                  ">
+                WORDPRESS PLUGINS
+              </p>
+            </div>
+            <div class="firstdiv">
+              <div class="circlediv">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <p style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: 600;
+                  ">
+                SUPPORT & IT
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="fivemaindiv">
+          <div class="fivefstfdiv">
+            <div class="fivecirclediv">
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <div class="fiveboldtextdiv">
+              <p style="font-size: 50px; font-weight: 700; color: #f2f2f2">
+                <b>12+</b>
+              </p>
+            </div>
+            <div class="fivenormaltext">
+              <p style="font-size: 25px; font-weight: 600; color: #f2f2f2">
+                Years of experience
+              </p>
+            </div>
+          </div>
+          <div class="fivefstfdiv">
+            <div class="fivecirclediv">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <div class="fiveboldtextdiv">
+              <p style="font-size: 50px; font-weight: 700; color: #f2f2f2">
+                <b>999+</b>
+              </p>
+            </div>
+            <div class="fivenormaltext">
+              <p style="font-size: 25px; font-weight: 600; color: #f2f2f2">
+                Completed Projects
+              </p>
+            </div>
+          </div>
+          <div class="fivefstfdiv">
+            <div class="fivecirclediv">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="fiveboldtextdiv">
+              <p style="font-size: 50px; font-weight: 700; color: #f2f2f2">
+                <b>480+</b>
+              </p>
+            </div>
+            <div class="fivenormaltext">
+              <p style="font-size: 25px; font-weight: 600; color: #f2f2f2">
+                Total Clients
+              </p>
+            </div>
+          </div>
+          <div class="fivefstfdiv">
+            <div class="fivecirclediv">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="fiveboldtextdiv">
+              <p style="font-size: 50px; font-weight: 700; color: #f2f2f2">
+                <b>15+</b>
+              </p>
+            </div>
+            <div class="fivenormaltext">
+              <p style="font-size: 25px; font-weight: 600; color: #f2f2f2">
+                Awards Won
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="sixmaindiv">
+          <div class="sixfirst">
+            <p style="font-size: 30px; font-weight: 600">
+              <b>Our Portfolio</b>
+            </p>
+            <p style="font-weight: 600">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+              corrupti accusantium id eos doloribus iusto! Harum explicabo
+              blanditiis illum recusandae!
+            </p>
+          </div>
+          <div class="sixsecend">
+            <div class="galeryheading">
+              <p><u>All</u></p>
+              <p>WEB DEVELOPMENT</p>
+              <p>GAME DEVELOPMENT</p>
+              <p>APP DEVELOPMENT</p>
+            </div>
+            <div class="gallerydiv">
+              <div class="image_items">
+                <img src="../../images/glass.jpg" alt="glass_img" />
+              </div>
+              <div class="image_items">
+                <img src="../../images/apple.jpg" alt="apple" />
+              </div>
+              <div class="image_items">
+                <img src="../../images/car.jpg" alt="car" />
+              </div>
+              <div class="image_items">
+                <img src="../../images/apple-1172060.jpg" alt="apple-1172" />
+              </div>
+              <div class="image_items">
+                <img src="../../images/lions.jpg" alt="lions" />
+              </div>
+              <div class="image_items">
+                <img src="../../images/apples-3580560.jpg" alt="apples-358" />
+              </div>
+
+              <!-- <div class="image1">
+                <div class="images">
+                  <img src="../../images/glass.jpg" alt="">
+                </div>
+                <div class="images">
+                  <img src="../../images/apple.jpg" alt="">
+                </div>
+                <div class="images">
+                  <img src="../../images/car.jpg" alt="">
+                </div>
+                <div class="image2">
+                  <div class="imagess">
+                    <img src="../../images/apple-1172060.jpg" alt="">
+                  </div>
+                  <div class="imagess">
+                    <img src="../../images/lions.jpg" alt="">
+                  </div>
+                  <div class="imagess">
+                    <img src="../../images/apples-3580560.jpg" alt="">
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <footer>
+            <div id="first_div">
+              <div id="firstdivkeleft">
+                <p style="font-size: 30px">Don't Miss Out</p>
+                <p>Sign Up for the latest beauty news, product sample.</p>
+                <div class="formdiv">
+                  <div class="email">
+                    <p>EMAIL ADDRESS*</p>
+                    <input type="text" placeholder="Enter Your Email Address" />
+                  </div>
+                  <div class="birthday">
+                    <p>BIRTHDAY*</p>
+                    <input type="date" />
+                  </div>
+                </div>
+                <div class="signup">
+                  <p><a href="#">Sign Up</a></p>
+                </div>
+
+                <p style="text-align: justify">
+                  This Site is introduce for US consumers.By signing up.You
+                  understand and agree that your data will be collected and
+                  used subject to our US privacy policy and terms of USc.
+                </p>
+                <div id="requiremaindiv">
+                  <p>Require information*</p>
+                  <div id="requireinformation">
+                    <div class="socialsitewithcircl">
+                      <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div class="socialsitewithcircl">
+                      <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div class="socialsitewithcircl">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                    <div class="socialsitewithcircl">
+                      <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    <div class="socialsitewithcircl">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="socialsitewithcircl">
+                      <i class="fa-brands fa-facebook"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="firstdivkeright">
+                <div class="firstrightdiv">
+                  <p>COMPANY</p>
+                  <p>About</p>
+                  <p>Career</p>
+                  <p>Experts and spokesmodels</p>
+                </div>
+                <div class="firstrightdiv">
+                  <p>CUSTOME SERVICE</p>
+                  <p>Contact Us</p>
+                  <p>My Accounts</p>
+                  <p>Store Locator</p>
+                  <p>Redoom Rewards</p>
+                </div>
+                <div class="firstrightdiv">
+                  <p>MORE TO EXPLORE</p>
+                  <p>Beauty Magzino</p>
+                  <p>Tools and Consultations</p>
+                  <p>Offers</p>
+                  <p>#LorealParis</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="border: 1px solid white"></div>
+            <div class="secmaindiv">
+              <div class="secmaindivkeleft">
+                <p>SITE MAP</p>
+                <p>PRIVACY</p>
+                <p>TERMS</p>
+                <p>USER CONTENT PERMISSION TERMS</p>
+                <p>MAKEUPCOM</p>
+                <p>SKINCARE.COM</p>
+              </div>
+              <div class="secdivkeright">
+                <p>
+                  Copy right @<span style="color: rgb(235, 11, 11)">2023</span>
+                </p>
+                <p>BACK TO TOP</p>
+              </div>
+            </div>
+            <div style="border: 1px solid #ffffffa3"></div>
+            <div class="third_div">
+              <p>
+                This Site is introduce for US consumers. Cookies and related
+                technology are used for advertising. To learn more, Visit
+                <a href="">AdChoice <span> and our</span> Privacy Policy</a>
+              </p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./templates.js"></script>
+</body>
+
+</html>
+<script src="https://kit.fontawesome.com/5a216e4a4f.js" crossorigin="anonymous"></script>

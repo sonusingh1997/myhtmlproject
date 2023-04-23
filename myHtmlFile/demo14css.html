@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+
+        .clickMe button {
+            border: 0;
+            width: 100px;
+            height: 200px;
+            background-color: rgb(128, 8, 8);
+            animation: outer 3s infinite;
+            transform: skewX(40deg);
+            transform: skew(50deg, 70deg)
+        }
+
+        button {
+            width: 50px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        button:hover {
+            background-color: brown;
+            animation: all .3s ease-in-out infinite;
+        }
+
+        @keyframes outer {
+            /* from{
+           transform: rotate(1.2px);
+        }
+        to{
+            transform: rotate(3.5px);
+        } */
+
+            50% {
+                transform: rotate(90deg);
+                background-color: aqua;
+                transition: all ease-in-out;
+            }
+
+            75% {
+                transform: rotate(135deg);
+                background-color: black;
+            }
+
+            100% {
+                transform: rotate(180deg);
+                background-color: brown;
+            }
+
+        }
+
+        @keyframes all {
+            50% {
+                background-color: aqua;
+            }
+
+            100% {
+                background-color: blueviolet;
+            }
+        }
+
+        main{
+            width:500px;
+            height: 500px;
+            border: 1px solid red;
+            background-image: url("../images/cat.jpg");
+            background-repeat: no-repeat;
+            background-size:contain;
+            background-position:top;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="clickMe">
+            <button>click me</button>
+        </div>
+    
+        <button>x</button>
+        <button>y</button>
+        <button>z</button>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas accusamus impedit doloremque nulla hic esse sunt. Iure voluptates in esse accusamus sunt animi tempora possimus et sed. Reprehenderit, quas inventore.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque ullam tempora atque id. Reprehenderit, excepturi alias quibusdam commodi ab ad, eos praesentium architecto temporibus in tenetur quo ipsam officia delectus.</p>
+    </main>
+    
+
+</body>
+
+</html>

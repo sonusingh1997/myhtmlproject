@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      background-color: rgb(194, 201, 201);
+      display: grid;
+      grid-template-columns: 300px 1fr 1fr;
+      grid-template-rows: 100px 100px 100px 100px 100px;
+      /* grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr); */
+      /* height: 500px; */
+      margin: 30px 100px;
+      /* row-gap: 20px; */
+      /* column-gap: 20px; */
+    }
+
+    .item {
+      border: 1px solid rgb(121, 119, 119);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      /* grid-row-start: 1;
+            grid-row-end: 3; */
+      grid-row: 1 / span 2;
+      background-color: aqua;
+    }
+
+    .navbar {
+      /* grid-column-start: 2;
+            grid-column-end: 4; */
+      grid-column: 2 / span 2;
+      background-color: teal;
+    }
+
+    .member_login {
+      /* grid-column-start: 2;
+            grid-column-end: 4; */
+      grid-column: 2 / span 2;
+      background-color: maroon;
+    }
+
+    .menu_bar {
+      /* grid-row-start: 3;
+            grid-row-end: 5; */
+      grid-row: 3 / span 2;
+      background-color: #ffff;
+    }
+
+    .main_container {
+      /* grid-row-start: 3;
+            grid-row-end: 5; */
+      grid-row: 3 / span 2;
+      background-color: blueviolet;
+    }
+
+    .footer {
+      /* grid-column-start: 1;
+            grid-column-end: 4; */
+      grid-column: 1 / span 3;
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="item logo">Logo</div>
+    <div class="item navbar">Nav_Bar</div>
+    <div class="item member_login">Member_Login</div>
+    <div class="item menu_bar">Menu_Bar</div>
+    <div class="item main_container">Main_Container</div>
+    <div class="item">advertigement_1</div>
+    <div class="item">advertigement1_2</div>
+    <div class="item footer">Footer</div>
+  </main>
+</body>
+
+</html>

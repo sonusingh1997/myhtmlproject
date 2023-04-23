@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script
+      src="https://kit.fontawesome.com/5a216e4a4f.js"
+      crossorigin="anonymous"
+    ></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+
+    footer {
+      background-color: black;
+      padding: 0 20px;
+      color: white;
+    }
+
+    #first_div {
+      display: flex;
+      height: 460px;
+      margin: 5px 5px;
+    }
+
+    #firstdivkeleft {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 20px;
+      gap: 20px;
+      /* border: 1px solid rgb(0, 255, 42); */
+      width: 700px;
+      margin: 0 5px;
+    }
+
+    #firstdivkeright {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      /* border: 1px solid red; */
+      width: 1000px;
+      margin: 5px 5px;
+      padding: 20px;
+    }
+
+    .socialsitewithcircl {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border: 1px solid white;
+      border-radius: 50px;
+    }
+
+    #requiremaindiv {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    #requireinformation {
+      display: flex;
+      gap: 20px;
+    }
+
+    .signup {
+      border: 3px solid white;
+      text-align: center;
+      padding: 10px;
+      margin: 0 130px 0 0;
+    }
+
+    .signup a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .formdiv {
+      display: flex;
+      gap: 20px;
+    }
+
+    .email {
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .email input {
+      width: 200px;
+      height: 45px;
+    }
+
+    .birthday {
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .birthday input {
+      width: 136px;
+      height: 45px;
+      color: #726c6c;
+
+    }
+
+
+    .firstrightdiv {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+    }
+
+    .secmaindiv {
+      display: flex;
+      padding: 20px 20px;
+      justify-content: space-between;
+
+    }
+
+    .secmaindivkeleft {
+      display: flex;
+      gap: 20px;
+      font-size: 12px;
+      flex-wrap: wrap;
+    }
+
+    .secdivkeright {
+      display: flex;
+      gap: 20px;
+      font-size: 12px;
+      flex-wrap: wrap;
+    }
+
+    .third_div {
+      padding: 20px 20px;
+      color: #ffffffa3;
+    }
+
+    .third_div span {
+      color: #ffffffa3;
+      padding: 0 5px;
+    }
+
+    .third_div a {
+      padding: 0 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <footer>
+      <div id="first_div">
+        <div id="firstdivkeleft">
+          <p style="font-size: 30px;">Don't Miss Out</p>
+          <p>Sign Up for the latest beauty news, product sample.</p>
+          <div class="formdiv">
+            <div class="email">
+              <p>EMAIL ADDRESS*</p>
+              <input type="text" placeholder="Enter Your Email Address">
+            </div>
+            <div class="birthday">
+              <p>BIRTHDAY*</p>
+              <input type="date">
+            </div>
+          </div>
+          <div class="signup">
+            <p><a href="#">Sign Up</a></p>
+          </div>
+
+          <p style="text-align: justify;">This Site is introduce for US consumers.By signing up.You understand and agree
+            that your data
+            will be collected and used subject to our US privacy policy and terms of USc.
+          </p>
+          <div id="requiremaindiv">
+            <p>Require information*</p>
+            <div id="requireinformation">
+              <div class="socialsitewithcircl">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <div class="socialsitewithcircl">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="socialsitewithcircl">
+                <i class="fa-brands fa-linkedin"></i>
+              </div>
+              <div class="socialsitewithcircl">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="socialsitewithcircl">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div class="socialsitewithcircl">
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div id="firstdivkeright">
+          <div class="firstrightdiv">
+            <p>COMPANY</p>
+            <P>About</P>
+            <p>Career</p>
+            <p>Experts and spokesmodels</p>
+          </div>
+          <div class="firstrightdiv">
+            <p>CUSTOME SERVICE</p>
+            <p>Contact Us</p>
+            <p>My Accounts</p>
+            <p>Store Locator</p>
+            <p>Redoom Rewards</p>
+          </div>
+          <div class="firstrightdiv">
+            <p>MORE TO EXPLORE</p>
+            <p>Beauty Magzino</p>
+            <p>Tools and Consultations</p>
+            <p>Offers</p>
+            <p>#LorealParis</p>
+          </div>
+        </div>
+      </div>
+      <!-- End First Div -->
+
+      <div style="border: 1px solid white;"></div>
+      <div class="secmaindiv">
+        <div class="secmaindivkeleft">
+          <p>SITE MAP</p>
+          <P>PRIVACY</P>
+          <P>TERMS</P>
+          <P>USER CONTENT PERMISSION TERMS</P>
+          <P>MAKEUPCOM</P>
+          <P>SKINCARE.COM</P>
+        </div>
+        <div class="secdivkeright">
+          <p>Copy right @<span style="color: rgb(235, 11, 11);">2023</span></p>
+          <p>BACK TO TOP</p>
+        </div>
+      </div>
+      <div style="border:1px solid #ffffffa3"></div>
+      <div class="third_div">
+        <P>This Site is introduce for US consumers. Cookies and related technology are used for advertising.
+          To learn more, Visit <a href="">AdChoice <span> and our</span> Privacy Policy</a>
+        </P>
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>

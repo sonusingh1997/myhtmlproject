@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gridtemplates1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            background-color: rgb(194, 201, 201);
+            display: grid;
+            grid-template-columns: 300px 1fr 200px;
+            grid-template-rows: 120px 120px auto auto;
+        }
+
+        .item {
+            padding: 0px 50px;
+        }
+
+        .logo {
+            grid-row: 1 / span 2;
+            background-image: url("../../images/restro_pic.jpg");
+            background-repeat: no-repeat;
+            background-position: initial;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo p {
+            font-size: 30px;
+            font-weight: 600;
+            font-family: Georgia, "Times New Roman", Times, serif;
+            color: red;
+            background-color: teal;
+            animation: logoblink 3s linear infinite;
+        }
+
+        @keyframes logoblink {
+            0% {
+                transform: scale(1.2);
+            }
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            grid-column: 2 / span 2;
+            background-color: rgb(159, 112, 98);
+        }
+
+        .restro_head {
+            display: flex;
+            padding: 20px 0 0 0;
+            font-size: 30px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .restro_layout {
+            display: flex;
+            gap: 80px;
+            /* padding: 0px 50px; */
+        }
+
+        .member_login {
+            grid-column: 2 / span 2;
+            background-color: rgb(216, 215, 195);
+        }
+
+        .menu_bar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            /* grid-row: 3 / span 2; */
+            background-color: rgb(36, 33, 28);
+            padding: 41px 27px;
+            /* width: 200px; */
+        }
+
+        .menuBarLayout1 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            line-height: 18px;
+        }
+
+        .menuBarLayoutChild {
+            display: flex;
+            gap: 10px;
+            color: #ffff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .menuBarLayoutChild i {
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .main_advertigement {
+            /* grid-row: 3 / span 2; */
+            background-color: rgb(157, 129, 184);
+        }
+
+        .main_advertigement i {
+            color: red;
+            padding: 0 5px;
+            animation: blink 0.3s infinite;
+        }
+
+        @keyframes blink {
+            from {
+                color: blue;
+            }
+
+            to {
+                color: maroon;
+            }
+        }
+
+
+
+        .restro_child_layout {
+            display: flex;
+            gap: 10px;
+            color: #ffff;
+            font-size: 20px;
+        }
+
+        .member_login {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .memberlogin label {
+            display: inline-block;
+            height: 20px;
+            width: 100px;
+            text-align: right;
+            color: rgb(110, 6, 6);
+        }
+
+        .memberlogin input {
+            margin: 0 20px;
+            background-color: #ffff;
+            height: 25px;
+            padding: 0 10px;
+            border: 0;
+            outline: 0;
+        }
+
+        .memberlogin button {
+            margin: 0 0px 0 124px;
+            padding: 5px;
+            background-color: rgb(170, 98, 69);
+            color: white;
+        }
+
+        .memberlogin button:hover {
+            background-color: rgb(67, 41, 214);
+        }
+
+        .right_mem_login {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+        }
+
+        .left_mem_login {
+            color: rgb(148, 27, 27);
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        #Lines {
+            border: 1px solid #a79090;
+            width: 233px;
+        }
+
+        .menuBarLayout2 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .menutwo {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            line-height: 35px;
+            text-align: justify;
+        }
+
+        .contact_address {
+            color: #ffff;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+
+        .main_container {
+            padding: 30px 30px 0 30px;
+            /* grid-row: 3 / span 2; */
+            background-color: rgb(216, 215, 195);
+            /* margin: auto; */
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .main_container_first {
+            padding: 0 0 40px 0;
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+            gap: 20px;
+            font-weight: 600;
+        }
+
+        .main_container_text {
+            font-size: 18px;
+            font-family: "Times New Roman", Times, serif;
+            color: rgb(14, 13, 13);
+            line-height: 27px;
+        }
+
+        .main_container_text u {
+            color: blue;
+        }
+
+        .main_container_text b {
+            color: blue;
+        }
+
+        .main_container_text a {
+            color: red;
+        }
+
+        .main_container_text a:hover {
+            color: blue;
+        }
+
+        .main_container_second {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 0 0 28px 0;
+        }
+
+        .main_container_text2 {
+            display: flex;
+            gap: 20px;
+            /* border: 1px solid black; */
+            border-top: dotted;
+            border-bottom: dotted;
+            background-color: rgb(189 188 178 / 44%);
+        }
+
+        .leftdivmain {
+            width: 200px;
+            margin: 20px;
+        }
+
+        .leftdivmain img {
+            height: 158px;
+            width: 200px;
+        }
+
+        .rightdivmain {
+            margin: 20px 20px 20px 0px;
+        }
+
+        .rightdivmaintext {
+            padding: 50px 10px 0 10px;
+            align-items: center;
+            text-align: justify;
+            font-weight: 600;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .advertigement {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .ads {
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+            margin: 40px 10px 20px 10px;
+        }
+
+        .ad1 {
+            height: 400px;
+            border-radius: 20px;
+        }
+
+        .ad1 img {
+            width: 177px;
+            height: 400px;
+            border-radius: 20px;
+            animation: adblink 3s infinite;
+        }
+
+        @keyframes adblink {
+            from {
+                transform: scale(0.2);
+            }
+
+            to {
+                transform: translateY(-20px);
+            }
+        }
+
+        .ad2 {
+            height: 193px;
+        }
+
+        .ad2 img {
+            width: 177px;
+            height: 193px;
+            animation: ad2blink 4s infinite;
+            border-radius: 20%;
+        }
+
+        @keyframes ad2blink {
+            0% {
+                transform: rotateY(90deg);
+            }
+        }
+
+        .tooltip {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .tooltiptext {
+            position: absolute;
+            visibility: hidden;
+            top: 95px;
+            left: 371px;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            color: blue;
+        }
+
+        .tooltiptext a {
+            border-radius: 10px;
+            color: black;
+            font-size: 20px;
+            background-color: #ffff;
+            display: inline-block;
+            top: 40px;
+            padding: 20px;
+            height: 60px;
+        }
+
+        .footer {
+            grid-column: 1 / span 3;
+            background-color: rgb(35, 35, 35);
+            color: white;
+            display: flex;
+            row-gap: 40px;
+            flex-direction: column;
+        }
+
+        .upfooter {
+            display: flex;
+            gap: 40px;
+            justify-content: space-around;
+            padding: 38px 0 0 0;
+
+        }
+
+        .leftfooter {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .betfooter {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .socialchannel {
+            display: flex;
+            gap: 20px;
+        }
+
+        .rightfooter {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .downfooter {
+            background-color: white;
+            color: black;
+            padding: 30px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .socialsitewithcircl {
+            font-size: 20px;
+            color: rgb(218, 210, 210);
+            padding: 20px 0 0 0;
+        }
+
+        .inputbutton {
+            padding: 20px 0 0 0;
+        }
+
+        .inputbutton input {
+            padding: 0 0 0 20px;
+            height: 44px;
+            outline: 0;
+            border: 0;
+        }
+
+        .inputbutton input::placeholder {
+            padding: 0 0 0 20px;
+        }
+
+        .inputbutton button {
+            height: 44px;
+            padding: 0;
+            outline: 0;
+            border: 0;
+            width: 104px;
+        }
+
+        .inputbutton button:hover {
+            background-color: blue;
+            color: #ffff;
+            transform: translateX(20px);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="logo">
+            <p><b> My Resort</b></p>
+        </div>
+        <div class="item navbar">
+            <div class="restro_head">
+                <p>Restaurant Layout</p>
+            </div>
+            <div class="restro_layout">
+                <div class="restro_child_layout">
+                    <i class="fa-solid fa-caret-down"></i>
+                    <p class="tooltip">
+                        CSS LAYOUTS
+                        <span class="tooltiptext">
+                            <a target="_blank" href=https://www.w3schools.com/css/css_boxmodel.asp>
+                                Box Model
+                            </a>
+                        </span>
+                    </p>
+                </div>
+
+                <div class="restro_child_layout">
+                    <!-- <i class="fa-solid fa-caret-down"></i> -->
+                    <p>FLASH TEMPLATES</p>
+                </div>
+                <div class="restro_child_layout">
+                    <!-- <i class="fa-solid fa-caret-down"></i> -->
+                    <p>COMPANY</p>
+                </div>
+                <div class="restro_child_layout">
+                    <!-- <i class="fa-solid fa-caret-down"></i> -->
+                    <p>CONTACT</p>
+                </div>
+            </div>
+        </div>
+        <div class="item member_login">
+            <div class="left_mem_login">
+                <p class="left_men_login_text">MEMBER LOGIN</p>
+            </div>
+            <div class="right_mem_login">
+                <div class="memberlogin">
+                    <label>USERNAME</label>
+                    <input type="text" />
+                </div>
+                <div class="memberlogin">
+                    <label>PASSWORD</label>
+                    <input type="password" />
+                </div>
+                <div class="memberlogin">
+                    <button>LOGIN</button>
+                </div>
+            </div>
+        </div>
+        <div class="menu_bar">
+            <div class="menuBarLayout1">
+                <div class="menuBarLayoutChild">
+                    <i class="fa-solid fa-circle"></i>
+                    <u>HOME PAGE</u>
+                </div>
+                <div class="menuBarLayoutChild">
+                    <i class="fa-solid fa-circle"></i>
+                    <u>CSS TEMPLATES</u>
+                </div>
+                <div class="menuBarLayoutChild">
+                    <i class="fa-solid fa-circle"></i>
+                    <u>FLASH WEBSITE</u>
+                </div>
+                <div class="menuBarLayoutChild">
+                    <i class="fa-solid fa-circle"></i>
+                    <u>WEB DEVELOPMENT</u>
+                </div>
+                <div class="menuBarLayoutChild">
+                    <i class="fa-solid fa-circle"></i>
+                    <u>CUSTOMER SUPPORT</u>
+                </div>
+                <div class="menuBarLayoutChild">
+                    <i class="fa-solid fa-circle"></i>
+                    <u>JAVA PROGRAMS</u>
+                </div>
+                <div class="menuBarLayoutChild">
+                    <i class="fa-solid fa-circle"></i>
+                    <u>HELP & SUPPORT</u>
+                </div>
+                <div id="Lines"></div>
+            </div>
+            <div class="menuBarLayout2">
+                <div class="menuone">
+                    <p style="
+                font-size: 25px;
+                font-weight: 600;
+                color: rgb(228, 228, 17);
+              ">
+                        NEWS & EVENTS
+                    </p>
+                </div>
+                <div class="menutwo">
+                    <p style="
+                font-weight: 600;
+                color: rgb(137, 172, 69);
+                font-size: 20px;
+              ">
+                        Lorem, ipsum dolor sit
+                    </p>
+                    <p style="
+                color: #ffff;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                  'Trebuchet MS', sans-serif;
+              ">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                        ex commodi repellendus?
+                    </p>
+                </div>
+                <div class="menutwo">
+                    <p style="
+                font-weight: 600;
+                color: rgb(137, 172, 69);
+                font-size: 20px;
+              ">
+                        Lorem, ipsum dolor sit
+                    </p>
+                    <p style="
+                color: #ffff;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                  'Trebuchet MS', sans-serif;
+              ">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                        ex commodi repellendus?
+                    </p>
+                </div>
+                <div id="Lines"></div>
+            </div>
+            <div class="menuBarLayout3">
+                <p style="
+              padding: 0 0 20px 0;
+              font-size: 25px;
+              font-weight: 600;
+              color: rgb(228, 228, 17);
+            ">
+                    CONTACT
+                </p>
+                <div class="contact_address">
+                    <p>TEL : 9340417802</p>
+                    <p>STD : 00 0987 6754 8765</p>
+                    <p>EMAIL : sonu952383@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="item main_container">
+            <div class="main_container_first">
+                <p style="font-size: 25px; color: rgb(148, 27, 27)">
+                    WELCOME TO MY RESTAURANT
+                </p>
+                <p class="main_container_text">
+                    A restaurant is a business that prepares and serves food and drinks
+                    to customers. Meals are generally served and eaten on the premises
+                    <a href="https://linktr.ee/babydragonnoida">Baby Dragon Bar & Restaurant</a>
+                </p>
+                <p class="main_container_text">
+                    A restaurant is a place where you can eat a meal and pay for it. In
+                    restaurants, your food is usually served to you at your table by a
+                    waiter or waitress. The restaurant serves breakfast, lunch, and
+                    dinner. The food at the restaurant was good and the waiters were
+                    polite.
+                </p>
+            </div>
+            <div class="main_container_second">
+                <p style="font-size: 25px; color: rgb(148, 27, 27); font-weight: 600">
+                    QUALITY PRODUCTS
+                </p>
+                <div class="main_container_text2">
+                    <div class="leftdivmain">
+                        <img src="../../images/foodimg1.jpg" alt="" />
+                    </div>
+                    <div class="rightdivmain">
+                        <p class="rightdivmaintext">
+                            Food quality is a concept often based on the organoleptic
+                            characteristics and nutritional value of food. Producers
+                            reducing potential pathogens and other hazards through food
+                            safety practices is another important factor in gauging
+                            standards. <span style="color: red; font-weight: 600;">Read more...</span>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="main_container_text2">
+                    <div class="leftdivmain">
+                        <img src="../../images/foodimg2.jpg" alt="" />
+                    </div>
+                    <div class="rightdivmain">
+                        <p class="rightdivmaintext">
+                            Food quality testing is necessary to monitor and control quality
+                            parameters throughout the fresh produce supply chain to meet
+                            consumer. This foresight review identifies three focus areas to make our food supply chains
+                            safer.
+                            Read our research paper on the global state of food safety and our top 3 issues. <span
+                                style="color: red; font-weight: 600;">Read more...</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="main_container_first">
+                <p style="font-size: 25px; color: rgb(148, 27, 27)">OUR SUPPORT</p>
+                <p class="main_container_text">
+                    We answer support issues workdays between 08.00am and 10.00pm,
+                    Central Indian Time. E-mail: <u>sonu952383@gmail.com</u>. Phone
+                    (English speaking, Hindi): <b> +919340418702.</b>
+                </p>
+                <p class="main_container_text">
+                    When you need advanced technical help for issues that can't be
+                    resolved with our knowledge base , you can always count on our
+                    friendly support agents.
+                </p>
+            </div>
+        </div>
+        <div class="main_advertigement">
+            <p style="color: blue">
+                <b>Ads</b><i class="fa-solid fa-triangle-exclamation"></i>
+            </p>
+            <div class="ads">
+                <div class="ad1">
+                    <img src="../../images/ads.png" alt="" />
+                </div>
+                <div class="ad2">
+                    <img src="../../images/ads2.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="upfooter">
+                <div class="leftfooter">
+                    <p style="font-size: 35px;">Phone Support</p>
+                    <p style="font-size: 20px; color: rgb(218, 210, 210);">24 HOURS A DAY</p>
+                    <p style="font-size: 20px; color: rgb(218, 210, 210); padding: 20px 0 0 0;">+ 01 234 567 890</p>
+                </div>
+                <div class="betfooter">
+                    <p style="font-size: 35px;">Follow Us</p>
+                    <p style="font-size: 20px; color: rgb(218, 210, 210);">SOCIAL MEDIA CHANNELS</p>
+                    <div class="socialchannel">
+                        <div class="socialsitewithcircl">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="socialsitewithcircl">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <div class="socialsitewithcircl">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <div class="socialsitewithcircl">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <div class="socialsitewithcircl">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="socialsitewithcircl">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightfooter">
+                    <p style="font-size: 35px;">Our Newsletter</p>
+                    <p style="font-size: 20px; color: rgb(218, 210, 210);">SIGN UP FOR SPECIAL OFFERS</p>
+                    <div class="inputbutton">
+                        <input type="email" name="email" id="email" placeholder="E-mail">
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="downfooter">
+                <p>© Copyright 2023 Mobirise - All Rights Reserved</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
+<script src="https://kit.fontawesome.com/5a216e4a4f.js" crossorigin="anonymous"></script>

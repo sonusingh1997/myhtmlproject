@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media query</title>
+    <link rel="icon" href="./images/logo-social.png" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: teal;
+            padding: 20px;
+        }
+
+        a {
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .right {
+            display: flex;
+            column-gap: 20px;
+        }
+
+        section {
+            background-color: red;
+            padding: 10px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px 0 0 0;
+        }
+
+        .section-div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        img {
+            width: 400px;
+            height: 200px;
+        }
+
+        footer {
+
+            display: flex;
+            justify-content: space-between;
+            column-gap: 10px;
+            padding: 20px;
+            background-color: black;
+            color: #fff;
+        }
+
+        .footer-left {
+            background-color: rgb(231, 126, 126);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .footer-right {
+            background-color: rgb(194, 112, 112);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* use media query for responsive */
+
+
+        @media screen and (min-width:280px) {
+            nav {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width:280px) {
+            img {
+                width: 40%;
+            }
+        }
+
+        @media screen and (max-width:480px) and (min-width:280px) {
+            footer {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* @media screen and (max-width:421px) and (min-width:280px) {
+            section{
+                width: 100%;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <main>
+        <nav>
+            <a target="_blank" href="https://www.google.com">Home</a>
+            <div class="right">
+                <a target="_blank" href="https://www.youtube.com">About</a>
+                <a target="_blank" href="https://www.amazon.com">Service</a>
+                <a target="_blank" href="https://www.flipkart.com">Contact</a>
+            </div>
+        </nav>
+        <section>
+            <h1>Student</h1>
+            <div class="section-div">
+                <img src="./images/images.jpg" alt="img1" />
+                <img src="./images/images.jpg" alt="img2" />
+                <img src="./images/images.jpg" alt="img3" />
+                <img src="./images/images.jpg" alt="img2" />
+                <img src="./images/images.jpg" alt="img3" />
+            </div>
+        </section>
+        <section>
+            <h1>Trainers</h1>
+            <div class="section-div">
+                <img src="./images/images.jpg" alt="img1" />
+                <img src="./images/images.jpg" alt="img2" />
+                <img src="./images/images.jpg" alt="img3" />
+                <img src="./images/images.jpg" alt="img2" />
+                <img src="./images/images.jpg" alt="img3" />
+            </div>
+        </section>
+        <footer>
+            <div class="footer-left">
+                <p>Address : jhsjhsj sshss y</p>
+                <p>Mo No : 9340418702</p>
+                <p>Email : sonu@952383@gmail.com</p>
+            </div>
+            <div class="footer-right">
+                <p>Insta : logo</p>
+                <p>FB: logo</p>
+                <p>Twitter : logo</p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
